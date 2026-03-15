@@ -1,0 +1,15 @@
+{
+    "upload": {
+        "path": "./upload",
+        "mode": "multi"
+    },
+    "logging": {
+        "commandLog": "True",
+        "fileLog": "True"
+    },
+    "receiver": [
+        {
+            "url": "http://127.0.0.1:8000/fileTransfer"
+        }
+    ]
+}

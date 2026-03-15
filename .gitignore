@@ -1,0 +1,14 @@
+__pycache__/
+.env
+.config
+.log
+youtube_credentials.json
+
+# API 키가 포함된 설정 파일들
+projects/*/appConfig.json
+projects/auto_shorts/api.config
+projects/auto_shorts/youtube_credentials.json
+
+# 생성된 결과 파일들
+result/
+log/
