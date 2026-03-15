@@ -230,13 +230,13 @@ def generate_blog_post(news_context, feedback=None):
                     pass
                 time.sleep(retry_after)
                 continue
-            logger.error(f"Gemini 생성 중 오류: {e}")
+            logger.error(f"❌ Gemini 생성 중 오류: {e}")
             return None
         except Exception as e:
-            logger.error(f"Gemini 생성 중 예기치 못한 오류: {e}")
+            logger.error(f"❌ Gemini 생성 중 예기치 못한 오류: {e}")
             return None
 
-    logger.error("최대 시도 횟수를 초과하여 블로그 원고를 생성하지 못했습니다.")
+    logger.error("❌ 최대 시도 횟수를 초과하여 블로그 원고를 생성하지 못했습니다.")
     return None
 
 # ==========================================
@@ -257,7 +257,7 @@ def generate_thumbnail(blog_text):
         )
         image_prompt = response.candidates[0].content.parts[0].text.strip()
     except Exception as e:
-        logger.warning(f"썸네일용 요약 생성 실패: {e}")
+        logger.warning(f"⁉️ 썸네일용 요약 생성 실패: {e}")
         return None
     
     # 세련된 블로그 썸네일 스타일 추가
@@ -279,7 +279,7 @@ def generate_thumbnail(blog_text):
         image_url = response.data[0].url
         return image_url
     except Exception as e:
-        logger.error(f"이미지 생성 실패: {e}")
+        logger.error(f"❌ 이미지 생성 실패: {e}")
         return None
 
 # ==========================================
@@ -352,7 +352,7 @@ def run_job(search_query: str):
     news_data = get_latest_economy_news(search_query)
 
     if not news_data:
-        logger.warning("뉴스 데이터 수집에 실패했습니다. 다음 일정까지 대기합니다.")
+        logger.warning("⁉️ 뉴스 데이터 수집에 실패했습니다. 다음 일정까지 대기합니다.")
         return
 
     # 2. 블로그 글 작성 (품질 평가 포함)
@@ -383,7 +383,7 @@ def run_job(search_query: str):
         logger.info(f"[{attempt}/{max_retries}] 점수: {quality_report['score']} (누락: {missing_text or '없음'})")
 
     if not best_content:
-        logger.error("블로그 원고를 생성하지 못해 작업을 종료합니다.")
+        logger.error("❌ 블로그 원고를 생성하지 못해 작업을 종료합니다.")
         return
 
     blog_content = best_content
@@ -473,7 +473,7 @@ def main():
                     run_job(search_query)
                 _save_state(state)
         except Exception:
-            logger.exception("스케줄 실행 중 오류 발생")
+            logger.exception("❌ 스케줄 실행 중 오류 발생")
         time.sleep(interval * 60)
 
 
