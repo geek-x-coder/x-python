@@ -1,9 +1,7 @@
-# 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
-
 import os
 import requests
 
-openAPI_KEY = "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"
+openAPI_KEY = ""
 
 print("💬 ChatGPT 터미널 챗앱 💬")
 
