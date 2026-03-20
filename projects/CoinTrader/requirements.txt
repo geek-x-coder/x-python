@@ -1,0 +1,11 @@
+pyupbit>=0.2.22
+pandas>=1.0
+numpy>=1.18
+requests>=2.20
+fastapi>=0.70.0
+uvicorn[standard]>=0.18.0
+textblob>=0.17.1
+transformers>=4.0.0
+scikit-learn>=1.0
+konlpy>=0.6.0
+slack-sdk>=3.0.0

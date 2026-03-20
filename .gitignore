@@ -12,3 +12,4 @@ projects/auto_shorts/youtube_credentials.json
 # 생성된 결과 파일들
 result/
 log/
+logs/

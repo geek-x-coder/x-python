@@ -1,0 +1,29 @@
+{
+  "symbol": "KRW-BTC",
+  "strategy": "vwap",
+  "final_value": 1041113.994447284,
+  "return_pct": 4.111399444728403,
+  "trades": [
+    {
+      "date": "2025-09-28 09:00:00",
+      "action": "buy",
+      "price": 160579000.0
+    },
+    {
+      "date": "2025-10-01 09:00:00",
+      "action": "sell",
+      "price": 168424000.0,
+      "reason": "take_profit"
+    },
+    {
+      "date": "2025-10-26 09:00:00",
+      "action": "buy",
+      "price": 169514000.0
+    },
+    {
+      "date": "2025-10-28 09:00:00",
+      "action": "sell",
+      "price": 168263000.0
+    }
+  ]
+}

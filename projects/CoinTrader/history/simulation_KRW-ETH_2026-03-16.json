@@ -1,0 +1,40 @@
+{
+  "symbol": "KRW-ETH",
+  "strategy": "ml",
+  "final_value": 1025430.5440289804,
+  "return_pct": 2.5430544028980373,
+  "trades": [
+    {
+      "date": "2026-01-11 09:00:00",
+      "action": "buy",
+      "price": 4592000.0
+    },
+    {
+      "date": "2026-01-13 09:00:00",
+      "action": "sell",
+      "price": 4870000.0,
+      "reason": "take_profit"
+    },
+    {
+      "date": "2026-01-14 09:00:00",
+      "action": "buy",
+      "price": 4917000.0
+    },
+    {
+      "date": "2026-01-19 09:00:00",
+      "action": "sell",
+      "price": 4723000.0,
+      "reason": "stop_loss"
+    },
+    {
+      "date": "2026-01-20 09:00:00",
+      "action": "buy",
+      "price": 4387000.0
+    },
+    {
+      "date": "2026-01-21 09:00:00",
+      "action": "sell",
+      "price": 4416000.0
+    }
+  ]
+}
